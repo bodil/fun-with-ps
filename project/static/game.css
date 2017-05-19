@@ -1,0 +1,66 @@
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+#app {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 512px;
+    height: 512px;
+    background: url(gfx/earth.jpg);
+    background-size: cover;
+    background-attachment: 50% 50%;
+    overflow: hidden;
+    -moz-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+.dogs {
+    position: absolute;
+    width: 256px;
+    height: 109px;
+    top: 276px;
+    left: 64px;
+    background: url(gfx/ship.png);
+    background-size: contain;
+}
+
+.dogs.gameover {
+    transform: rotate(30deg);
+}
+
+.obstacle {
+    position: absolute;
+    background-size: contain;
+}
+
+.obstacle.o0 {
+    width: 128px;
+    height: 128px;
+    background: url(gfx/asteroid-1.gif);
+}
+
+.obstacle.o1 {
+    width: 128px;
+    height: 128px;
+    background: url(gfx/asteroid-2.gif);
+}
+
+.obstacle.o2 {
+    width: 144px;
+    height: 128px;
+    background: url(gfx/hovercat.png);
+}
+
+.obstacle.o3 {
+    width: 125px;
+    height: 125px;
+    background: url(gfx/asteroid-3.gif);
+}
