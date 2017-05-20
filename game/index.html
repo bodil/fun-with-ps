@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Pup, Pup and Away</title>
+    <link rel="stylesheet" type="text/css" href="game.css">
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="dist/bundle.js"></script>
+    <script type="text/javascript">
+      (function() {
+        function resizeCanvas() {
+          var canvas = document.getElementById("app");
+          var scale = window.innerHeight / canvas.clientHeight;
+          canvas.style.mozTransform = "scale(" + scale + ")";
+          canvas.style.webkitTransform = "scale(" + scale + ")";
+          canvas.style.transform = "scale(" + scale + ")";
+          canvas.style.width = (window.innerWidth / scale) + "px";
+          console.log("resized: ", scale, canvas.style.width);
+        }
+        resizeCanvas();
+        window.addEventListener("resize", resizeCanvas);
+      })();
+    </script>
+  </body>
+</html>
